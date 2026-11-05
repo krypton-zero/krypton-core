@@ -1,0 +1,153 @@
+{
+  "generator": "gori-core tests/ticket.rs (Core::ticket_blind, Core::ticket_finalize and oprf::ServerKey, voprf 0.5.0)",
+  "formula": [
+    "ctx(i) = kind(1) || period(4, BE) || index(4, BE)",
+    "seed_t = HKDF-SHA256(ikm = account_seed, salt = period_salt, info = 'gori-core/ticket-seed-v1')",
+    "input_i = HMAC-SHA256(seed_t, 'gori-ticket-input-v1' || 0x00 || ctx(i))",
+    "blind_i = LE512(HMAC-SHA512(seed_t, 'gori-ticket-blind-v1' || 0x00 || ctx(i))) mod l",
+    "server key = DeriveKeyPair(server_seed, utf8('gori-ticket-key-v1|' + kind + '|' + period))",
+    "nullifier = SHA-256('gori-ticket-spent-v1' || 0x00 || kind(1) || period(4, BE) || input)"
+  ],
+  "cases": [
+    {
+      "account_seed": "0707070707070707070707070707070707070707070707070707070707070707",
+      "kind": 1,
+      "period": 0,
+      "period_salt": "5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+      "indices": [
+        0,
+        1,
+        2,
+        63
+      ],
+      "blinded": [
+        "2cda977b37d12e51caf51cf259c32ea0a8b1051210e7ab1c4c178fabbf8f6d0f",
+        "70f83b2fb49b0073296bc29b9c699971d2d3ab60c13e91bd2d7abaf8913c981c",
+        "2a2605c48700e5a94f6305c7fabc22d4bee731b822dc7535f94dbc3a351f9045",
+        "24fd7f2c0324006ebe0726bac6a641e31c8c69c7442d3349e795fadfd42a294a"
+      ],
+      "server_seed": "a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3",
+      "server_key_info": "gori-ticket-key-v1|1|0",
+      "server_pk": "0e83a0c78b2973077c56a578d96d315e295e2542559ee2918fb4f2d0e70f6614",
+      "proof_random_scalar": "7f6bf85bb9cc1f0600c6e0e4d96ab0c30cbb23307fcb0df3b47a3b6815e8fa0d",
+      "evaluated": [
+        "422232cc6277e87fdad7e281c50c49f7842db41294f25faba5e3ca2b57e61648",
+        "f2193197a484b7b5d8fd8acd6b677f467b962c5362d1371adc322fda26370a11",
+        "a4d8445d8d7ea9272bbe6df2e7a457391b5381f987aef52e12c8e92bbe0f414f",
+        "1a2964d0233486e4bf875d48b2778b02f540d990f0bbf550b3b2fae27a49b65d"
+      ],
+      "proof": "c65be48b3c5184f52ea633f7a8327e21e3e1be3d9719e80c599ff52ae64f3c048bb5e701a909b26b9cc803d1ac9dc4da0858e8bbc644a4ee44959ee2cc590c06",
+      "inputs": [
+        "07f56bf5fbf861a319322f44140750ab908ee3c658fbb1c2b979a37693d65403",
+        "4c11d270d9c5cc289087a004498dfe131f20296bcd78669cbe6a5eca9143ab2d",
+        "a05e1fcf3958dc0acb01e1749e39a5c809e4979f0c849ded8225aada868bc87d",
+        "90c0caeac794a92ca78ba0ab8f66eaf49c41c4e385f1d5db2acd6eb975c2e0b1"
+      ],
+      "outputs": [
+        "81371802b5a22d19e52305d2e0eebfdd30607dd8fd1107cf2d13f9f54d657de2e736b27b03015aff6cc0c12c108c57cecbff1df3663aa40d8363d254da8527d2",
+        "c8bd1cfdd5820d10a7711d681f416aca6724053fee3899226476b9b166f5701a33ce3e78b9bdeb799284a8cda415caee2f40b73a0a450b4f04bb3ab465c6b9ce",
+        "4516ac441570f81239427385a4e2cad999b199dfc0d427469ad89b0c570a87aa269e10562735e0f1d7ef36bb5f95025a1485bddda6d117b35b947f29abb2bd31",
+        "d3b1f1eab760a829e1a8fbfb1bfeb79c4fd2f1a1e8b3d03e7883791e51aa1f04713eb13a808ae11835d18342bec6e6ef45d58308e10a67c862cf1a627fef29d0"
+      ],
+      "nullifiers": [
+        "9d2bc26812b7182a11b2d59d198a20363faae6b067dc6ebb1441cb7bb5587fd9",
+        "7c70b31165e9ff09a2cd0ea1ddd981294867f00d9b658739b407bb0084e18cbc",
+        "55a48f4d29a6fa838e4ec5f62a7a2816f877f6c1f2d80868dd2d11e2d9bde637",
+        "a4ac0085db5522ba1d2aedb3282424e6096643f6ce1a862cabfd6f83bba03775"
+      ]
+    },
+    {
+      "account_seed": "0707070707070707070707070707070707070707070707070707070707070707",
+      "kind": 2,
+      "period": 5,
+      "period_salt": "6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b",
+      "indices": [
+        9
+      ],
+      "blinded": [
+        "66451f3f5fd37281679beab27d198d6ee2fd6d05737e34e15a03a9dacc3cdf18"
+      ],
+      "server_seed": "a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3",
+      "server_key_info": "gori-ticket-key-v1|2|5",
+      "server_pk": "f81a7f90f4c9c81a0b8dc0e8fa7e6bad8597ec25a9b75937c58f385a407a0121",
+      "proof_random_scalar": "1103fb5a58362db429efc926d5db817219764760fe961be669f576d02ad0f50b",
+      "evaluated": [
+        "88eecfcbe2028e6403b1a061ebacda8df5243fbbd099b49714f63a8668f60a79"
+      ],
+      "proof": "078bcd70a5c6a8b08ee32531a76c03a29ab20421a639f52b4f68b66ceedb230f94501f05aac0dcd30c75e9f0962d14ff9998e7d8ce143a1f9f3e4b991395c10e",
+      "inputs": [
+        "6389f8d4fb1b90c477be1b90dd6d228825a5024d0fdc2b0528ec0ab9866d8d17"
+      ],
+      "outputs": [
+        "8e8d7eda8abafb210f6b3fcd0c129fbbf6d974d0b979bd7cacf59cc61ba25e9446c29ef3afcfa0d9309ee4f19aed1a1dfa2b23bcf2355eea25a5e386cba46158"
+      ],
+      "nullifiers": [
+        "5c185e7fbdeab8bd882c9cbec5b4d72d6958165575db9fb9221993e55583e5a7"
+      ]
+    },
+    {
+      "account_seed": "0707070707070707070707070707070707070707070707070707070707070707",
+      "kind": 3,
+      "period": 7,
+      "period_salt": "7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c",
+      "indices": [
+        0,
+        599
+      ],
+      "blinded": [
+        "22f6293ce15f1296b76b8da512bec352e887aa313ee2e973eaa583f77d90b12a",
+        "e29901c6d62483400c8f8f1498827fd815f4ad9b4c62af4f34573c3c68705439"
+      ],
+      "server_seed": "a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3",
+      "server_key_info": "gori-ticket-key-v1|3|7",
+      "server_pk": "92dbb826027108a41f6aca65581506ee4b6e40d40d61663dd7119362b4d4c502",
+      "proof_random_scalar": "a39afd59f79f3a625318b368d04c532126316b907d6229d91e70b23840b8f009",
+      "evaluated": [
+        "cab90aebccffdb837c202ff00f8e796889b2fda1405cba6f81445f79520ad81d",
+        "662c2721cbeab3f08d5bfebed868b0de9e55fa2db0f5e5a33b22cb7c01d5be24"
+      ],
+      "proof": "7837c99653da68abc05b69cd3d658310e4aefcb36ebfcdb2c03b8f119d8b590bfa49602942663844f47ca90b9f28ce70cf085c40897cac7687e57b9d94fce90b",
+      "inputs": [
+        "f8e9bb6a7b467c8278ae74cb085244a9bbc6100305770ee3e51ff397ffcdc33c",
+        "3e81a8017a4c74158642c5b38043307f0ca84db31993a1592a607709d062063d"
+      ],
+      "outputs": [
+        "9482c7abda1364106f13ca112501207aeb40cb03ceb1be24583fb0ad998cfbbbbc11ffd0a69da6a0839170fd548f281785175fdfdf7738ce0a4f12c7724fc9a2",
+        "b71cebafe28b67ec5de4b4eaae333224c94c2b3077d79be0a2eb0be7696b8a63f1c579bb29319202530e70a1a47799c7f1e7f42f3f79959b85b2507538d51cfa"
+      ],
+      "nullifiers": [
+        "4abb8bddd5e819f7cc8a17cb11229b1a4031f07278f3d57e8ec9c5d8a82581a4",
+        "c024c85bc65766cc741752bfa966754840258633de27be446664a42282250194"
+      ]
+    },
+    {
+      "account_seed": "0707070707070707070707070707070707070707070707070707070707070707",
+      "kind": 4,
+      "period": 7,
+      "period_salt": "8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d8d",
+      "indices": [
+        4
+      ],
+      "blinded": [
+        "74d5c345fa366ce8a102cb741bc49ea4ad0e4d9e0d83bb340458b9480b596705"
+      ],
+      "server_seed": "a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3",
+      "server_key_info": "gori-ticket-key-v1|4|7",
+      "server_pk": "a43f4d71c41ef12a7e29ab4c9f75d8b90c2dccb54dc05103027f02e590a3e24e",
+      "proof_random_scalar": "35320059960948107d419caacbbd24d032ec8ec0fc2d37ccd3eaeda055a0eb07",
+      "evaluated": [
+        "322d8b7fb0333b417b60c8dae9c8ac0d5597d5bcaff29eedbd9c51551bf96b2a"
+      ],
+      "proof": "7ef83568e9d021ca5b456e0f68a0f36bfc02f6824c3da2b63d8d94f485f56c05988a3273bbf6d07f96e3b8e1c72454202c8cef64b6f26e687b498bb1e3fc7705",
+      "inputs": [
+        "11df4040d35bf7770a3a57cc0ab6025a7db2afcaa144da3ead8110deca6d9ad3"
+      ],
+      "outputs": [
+        "c7920cfd127d6806b7378c08278a4a5699b970d826bf17444b9ba44b8aca67aea0fab30407d053be55b5d0bdebcf53c63767574e887690748cf4a858ba099d79"
+      ],
+      "nullifiers": [
+        "1720decc4bd149d5800b43805454f303261d3cbd0bd3d98de7aae77f49f08bcd"
+      ]
+    }
+  ]
+}

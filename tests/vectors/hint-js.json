@@ -1,0 +1,60 @@
+{
+  "note": "Cross-implementation vectors for the post-quantum notification hint key ring. Sealed by the app's JavaScript layer with the same construction (@noble); the JavaScript reference implementation opens them again.",
+  "pairs": [
+    {
+      "id": "0f8b2c4e-1d3a-4b5c-9e7f-a1b2c3d4e5f6",
+      "secret": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+    },
+    {
+      "id": "7c1e0a52-3b4d-4e6f-8a9b-0c1d2e3f4a5b",
+      "secret": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f"
+    }
+  ],
+  "talks": [
+    {
+      "secrets": [
+        "404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f",
+        "606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f"
+      ],
+      "at": 1
+    }
+  ],
+  "ring": "01010f8b2c4e1d3a4b5c9e7fa1b2c3d4e5f6d0bed0012b79a574c32d4dee2cfb9de5d276f254068afca34ccbbca00cd53f06030f8b2c4e1d3a4b5c9e7fa1b2c3d4e5f635cbc68ab138d8018ca5e71bbe4cb962d57fa8d369addfb4e7e25a774a4d3d90017c1e0a523b4d4e6f8a9b0c1d2e3f4a5b7dc82f2d968c0df8bbf6ab4f1fb05e51b07cee38b5a6bf2da6a8b0dc5cc98af5037c1e0a523b4d4e6f8a9b0c1d2e3f4a5b70b9df0c7899112d50bac44764fbea2d38ad0f9dde427c98ee1478343e44f26702000000000000000000000000000000002140ddb33b8bed06d000f4977927a42fe98e1ee7141234d52d58df08cc6ed1c50200000000000000000000000000000000872411b5bfaf6149a7c2b328f6657be25d9dbc0d0823cc592acdd5d2410167f3",
+  "ids": {
+    "tid": "1a2b3c4d-5e6f-4a1b-8c2d-3e4f5a6b7c8d",
+    "line": "2b3c4d5e-6f7a-4b2c-9d3e-4f5a6b7c8d9e",
+    "callId": "3c4d5e6f-7a8b-4c3d-8e4f-5a6b7c8d9e0f"
+  },
+  "cases": {
+    "talkHeart": {
+      "g": "xA2aa2JWiVVaySOueXOpGob/9DeFfvbyO1Iu1Ekeu3LbRY9nk27AxzVvxyrvd9QIVW3QHpxC99Wz8wtzT4uUXCwqbsPCxZeB44+7Sr++8veEFAnN3FXiBLFr24maPxazQdfZ9Sm5raU+tIjJJy4eR9dO3GAvSSYvnUH+M0kLnsAw7uuqT/++i/lV9vyYPEX8sUEVH3y9BCB31tmP//VRkFk6N+bG4LoJEZzskS3Vjma4mvmDvLLipk6cNyfN14W6eDYFs+0HdtJaz3tunDq3SbQ46gBLjD/7uW196B5lQ82oGUHMeP+/tjj0+4NtCR90Od8jzJyZ7gYIQQ8CAODS+xbMHMV/5CJzK25KwJxXMjUlB1tfknNe+xalOAcHWhSrR+IdF+vLnyoWkVS6/omUolDH9nma062uU9IfM60BwcH40Z6p8o0fU503Yy+nJW/KWA9ujsWUGen6RGIGSk2j+E2QUDJynJdrJqNL2ulzZqGB9TUpxAt2hK/eDQCq9g/RP6t42/4ilJ4=",
+      "purpose": "talk",
+      "plain": "{\"v\":1,\"n\":\"Sage\",\"b\":\"\",\"r\":1,\"p\":\"1a2b3c4d-5e6f-4a1b-8c2d-3e4f5a6b7c8d\",\"c\":\"2b3c4d5e-6f7a-4b2c-9d3e-4f5a6b7c8d9e\"}"
+    },
+    "talkOld": {
+      "g": "iocUkQsi36k47NN+kOprz4PIwWcaQleG67q+eTp1N8AzR8qSCGialdPVBw+8IrNx5weavnSFTiDhToWIcUfmiHGZm5RGQpN82f7byhkbZkzCFdLcIOoWGIeVfCUzy8l39mtMJTqPNi0p1lIizBxGTY2YyZXddC9y+EfjxdJuWDaw/mXIvTvvy7K5yfhbMSz76demPS4bqthwVmil7I1pEy2wRC3VPoEJABiDAWPxmt2hEH29InPRuCXdHVqxlMJkgefHBXjgPEhG+McGOeyNBWmZ62tM8SMyeUTBjzqpTUISu3xU3zdR88hOQDtOJVzZ414+9P5HusnwswjAwkblM3XYEVBys0XjT2fkcpFNaGfkVHbH9cpCQEKTO4BHonl9y8CSXBQIiZUXzfN0j8VsxUdrBrjhPoIKFCR/FFjBYtdIUChvLlPbmsD+mE+Ulga8eFLsfeA/jxqLIUNQxiHpxvDqNyPL1SI6wEH9EtyIRyAUygzEiNw1eUt6HM9vQpVCoOYBpXpl7gQ=",
+      "purpose": "talk",
+      "plain": "{\"v\":1,\"n\":\"Zoe\",\"b\":\"\",\"m\":1,\"p\":\"1a2b3c4d-5e6f-4a1b-8c2d-3e4f5a6b7c8d\",\"c\":\"2b3c4d5e-6f7a-4b2c-9d3e-4f5a6b7c8d9e\"}"
+    },
+    "pairInvite": {
+      "g": "bLN003bcV721lyqeAJePVpXwcbfmQ0zNBu3AogX2fEeaLnPwW1cmqd9O3qCzV/hbAAT25s8R/a3RlEpgSy26gD9OeJZ9IVr2qrTBNVMTHxf8ABwFcM12fLm2ihHpqv4qdg0EzmWWZm7ydQrRv0+XI7TQi/rFY0RzDD26m2xUq5tN4cfCWjmAskKPjYrTvRZ7+Nk9dUpueNqfTlbZ9Vtr+oIgDzPifxqmVELJMrlzolxMXl5vzr9HtBYqaZW7ldMugJDjsvH/wMFfiRFNGcHMY0LuMimvLU27i0F90Jtb2ymrNUnfkCOA0qnLMRunJX8R6j42exA4rASzKiWpMaODWGDrdV3/b25bwg0bt+rmmvJ5VLF/348HXFaau7livVh/zYbC0A4hat5YXTajb0b8ymUwqDcj3+iHoLIlGdM224TQTQ46/RCDjtcPHWRVJeZvUgTP3u1eVjSQsEN93t8ODUeQFCddhEGCcoNWrZ15J09dzhuJ112U1xGAedIgoUW0oNPEKX9plnA=",
+      "purpose": "pair",
+      "plain": "{\"v\":1,\"n\":\"Renée\",\"b\":\"\",\"i\":\"0f8b2c4e-1d3a-4b5c-9e7f-a1b2c3d4e5f6\",\"p\":\"1a2b3c4d-5e6f-4a1b-8c2d-3e4f5a6b7c8d\",\"c\":\"1a2b3c4d-5e6f-4a1b-8c2d-3e4f5a6b7c8d\"}"
+    },
+    "callA": {
+      "g": "j1sx6crWpTIl7AlYVFxyw7Q/c1vdefv8dSgaxWbkC5r2VfRmIY9mfQFgvq3MnCazHwjAYDxXXNy+NUuju33phpfmh0Mte/I7KmlGyot9XoC+c2lk/QXWc6SaULm7rKNg3S9+Fg3+0vXvdoRygQMsgG3N01kuz5J6tu87ykCcqx1EmbdPMlZiS0XJ7jdbKLorUeukAQ6wDZ+TtMAWvNS9rjbPGsjePfQx4FT2e8MT6D7qZnIBuiDv3wkMy6euUCCgk3ettzHopKMaMm+Pegr4EnP1IQ2oMMFiSXmCK1sFjCUjm4Rb4fKD6edxfN/DWUoBz8U0LZhLdsLhjDVSoGe7HFgIrH3qYQFM49MC1BSc8yrbT88IG1br5NnSs/mA+iTNN0oaTaTHuVTinDO6L+VP1v2lQsgtYrNenhAiZ+tri9aeqB6as1fIh8SzfvXIsc1QpRUGj4TimYRt7Fc9DLopuQyLicB+lHWgDa6IqGQSfiC+0VKNXbaYwHaui2TctLnBOzA8vrunISsUypoQTkUwy6i57LKyFZNSPxL21H1V1Htx1GAQO0mzJhaReKOXP+e1RVrswOMvWiCBwHOFBEZbY4mypOp/H5GdLxRcFOysnoDd20ytTZlwoPIeTZI45d0caOQhMTFV66eO7tnrEoxQk5/6ICCpgQkjAKe7DHU4U/wDuia/D/T2NBka8STw0WE1h3jHOTh5EuWgtXA7H6hPKqkjFk4gKFSW",
+      "purpose": "call",
+      "plain": "{\"v\":1,\"n\":\"Sage\",\"k\":\"call\",\"x\":\"3c4d5e6f-7a8b-4c3d-8e4f-5a6b7c8d9e0f\",\"f\":\"0f8b2c4e-1d3a-4b5c-9e7f-a1b2c3d4e5f6\"}"
+    },
+    "callForgedByB": {
+      "g": "CtWPYYGkdniHiCX3USLSwbu8EM0ADY2hZHJS/Hv5T3jzoI1808jNdF6Qy4ZGUg42uMDrAVTLFKO97BcN0MHFt8WeoJ4YFN5tLPHu7CkuJjL9yEcU4Wwm+RlbNROjdvOwM6kYO+kk1kHmktAhwTJnG/huUQM+X7qOhkuS1FAO5KiEvNn9xRndX5ZgkgVuudCIK7D3mQkLFoZYDLOQDi7a54nIU5r3DJaIna62mB6fE8dgQx77SJKjm26lnUDkUu/pgx5BNEjZyo3eKnBDA0oUqI8xxzELGi4R7HiSzs84m/APdJQNBktYzqGlTYLeR0ryLZtDYnJOmPSbzuqVVufBxroJRL3trW5BmuyWHc+g03Q85nwEZbUKbd+222YqeECl3WUBze2CIBIgZkeHYB1K6Kc/aFrvmFFWD1YFV/lu/KVOxkIe6eHcEFrmPHN6/uElVTNAdu18B0udBWejLrUOBunReQ0Zfg+CNEABy74pon2+NBX4KvK12WM1k+WFIghed5pTOZpv49bZiq0gnXpRkRT/2Fir/dR9DryjEwJ0dh8bU3Jjv1C/3XfEAECp+53cdQdZ4JRXs4OY2UF+VDjqiKJ3Mde42c50N48rqAadSRlB2wF4EtKm5guA5Nngf7DjI9GwA3TrJMDVg9ykk3MwVOwH8o1+NIKYi5pwL5XRyZAU7r6aWdC9m5+WTLzXARBeU4GLgkTb3ZJoRNH1Jqk96hFCGaBQA0mJ",
+      "purpose": "call",
+      "plain": "{\"v\":1,\"n\":\"Sage\",\"k\":\"call\",\"x\":\"3c4d5e6f-7a8b-4c3d-8e4f-5a6b7c8d9e0f\",\"f\":\"0f8b2c4e-1d3a-4b5c-9e7f-a1b2c3d4e5f6\"}"
+    },
+    "unknownTalk": {
+      "g": "HdNnoAHqplCWRuv97FaUB++NGDhpJwn81TUrtDxPLd+E16DjllPhjwjeEKLEkngEHIc4adyYKVARGMvT8ZqqzEO/gNtThmnIwBjPeJuyuu/Wn1yloTQQyJW6aaBGrlhfavoO4jTpHklFjTgq6dgNEMLkknkU0BAwk3xqst3584MBc1HsUDTFfGCDT42sbGwZ28mI9g0u+8RRdJb32JwXWw3bgCA57w98//x8BOMWR2bVxFlg0IOWZ4STxWRNZXCRJ1PusEAf284r08h8BaAAkuitYb3hNrmuVZvtBvy59viJXmtgiSuttoFSGFoWP34xNRGorkZ65oBo4hqdUoYLPPU9Q17m3kC8pUvEW6Xs7F5tq4zYeBPgbG8Kt4M3V2KSaHHSMVoqkmTdcFDOzoou/mpZQLBc3It44zaLNyA1joYi6f2GApFf+WKsaXtJns/s4cWyXs8O/5pH7YASQIW0VrIsn+KLfv4C7/9kni2LWOwDNBAjfAHzOjXms7azguDdgf+aG7gIR7I=",
+      "purpose": "talk",
+      "plain": "{\"v\":1,\"n\":\"Sage\",\"b\":\"\",\"r\":1,\"p\":\"1a2b3c4d-5e6f-4a1b-8c2d-3e4f5a6b7c8d\",\"c\":\"2b3c4d5e-6f7a-4b2c-9d3e-4f5a6b7c8d9e\"}"
+    }
+  }
+}
