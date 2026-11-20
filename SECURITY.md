@@ -4,7 +4,7 @@
 
 Please do not open a public issue, pull request or discussion for a security problem.
 
-Email **support@krypton-0.com** with a subject line that starts with `[security]`.
+Email **security@krypton-0.com**.
 
 Please include:
 
@@ -14,7 +14,8 @@ Please include:
 - steps to reproduce, or a proof of concept (a failing test is ideal),
 - whether and how you would like to be credited.
 
-If you need an encrypted channel, say so in your first email and we will arrange one.
+To encrypt your report, use our PGP key at <https://krypton-0.com/.well-known/pgp-key.txt>
+(fingerprint `460D DBDD 84F1 9E52 94FA C4BF A6EE DF5D A0B7 57F2`).
 
 ## Coordinated disclosure
 
